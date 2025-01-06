@@ -153,7 +153,7 @@ const processOCR = async () => {
       } else {
         const parsedText = result.ParsedResults[0]?.ParsedText || "No text found";
         extractedDetails.value = extractDetails(parsedText)
-        ocrResults.value.push(extractedDetails);
+        ocrResults.value.push(extractedDetails.value);
 
         console.log(ocrResults.value)
         isLoading.value = false
