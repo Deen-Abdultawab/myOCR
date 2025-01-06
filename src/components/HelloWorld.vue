@@ -70,7 +70,7 @@
         >
           <h4 class="font-bold mb-2">Image {{ index + 1 }}</h4>
           <h3 class="text-gray-700">{{ result }}</h3>
-          <div>{{ extractedDetails }}</div>
+          <!-- <div>{{ extractedDetails }}</div> -->
         </div>
       </div>
 
@@ -153,7 +153,7 @@ const processOCR = async () => {
       } else {
         const parsedText = result.ParsedResults[0]?.ParsedText || "No text found";
         extractedDetails.value = extractDetails(parsedText)
-        ocrResults.value.push(parsedText);
+        ocrResults.value.push(extractedDetails);
 
         console.log(ocrResults.value)
         isLoading.value = false
